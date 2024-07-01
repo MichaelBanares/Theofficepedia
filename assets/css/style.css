@@ -1,0 +1,595 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgb(131, 131, 129);
+}
+
+main{
+    grid-area: main;
+    background-color: rgb(98, 122, 166);
+}
+
+aside{
+    grid-area: aside;
+    background-color: rgb(88, 82, 50);
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(139, 139, 139);
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+    'nav'
+    'aside'
+    'main'
+    'footer';
+
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: 10% 10% auto auto;
+    grid-template-columns: auto;
+}
+
+/* Nav */
+
+.nav{
+
+display: flex;
+align-items: center;
+justify-content: center;
+img{
+    height: 50%;
+}
+
+h3{
+    
+    font-size: 20px;
+    color: rgb(54, 54, 54);
+}
+}
+
+
+
+/* menu */
+
+.menu{
+display: none;}
+
+.menuphone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    img{
+       width: 40%;
+       margin: 0;
+       
+    }
+
+i{
+
+    font-size: 20px;
+    color: aliceblue;
+}
+
+
+}
+
+.seleccionado{
+color: rgb(60, 120, 193);
+font-size: 20px;
+}
+
+
+/*Main*/
+
+.main{
+img{
+    width: 100%;
+}
+}
+
+/* Solo para pagina de imagenes */
+.imagenes{
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+
+}
+
+.etiqueta{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgb(255, 255, 255);
+margin: 20px;
+text-align: center;
+border-radius: 5px;
+border: 1px solid rgb(255, 255, 255) ;
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+}
+
+.etiqueta:hover{
+    box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+}
+
+.etiqueta:hover img{
+    transform: scale(1.2);
+    transition: all .5s;
+}
+
+.etiqueta figure{
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Solo para pagina de personajes */
+
+.persona{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+}
+
+.etiqueta2{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgb(255, 255, 255);
+margin: 20px;
+text-align: center;
+border-radius: 5px;
+border: 1px solid rgb(255, 255, 255) ;
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+}
+
+.etiqueta2 figure{
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    filter: grayscale(100%);
+
+    
+
+
+}
+
+.etiqueta2 figure:hover{
+    filter: none;
+    transition-duration: 500ms;
+}
+
+.etiqueta2:hover{
+    box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+}
+
+.etiqueta2:hover img{
+    transform: scale(1.2);
+    transition: all .5s;
+}
+
+
+/* Footer */
+
+.footer{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+@media (width  >=576px){
+
+    .container{
+        display: grid;
+        grid-template-areas:
+        'nav nav'
+        'aside main'
+        'footer footer';
+    
+        height: 100vh;
+        grid-template-columns: 25% auto;
+        grid-template-rows: 10% auto 10%;
+    }
+    
+    /* Nav */
+    
+    .nav{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 90%;
+        }
+    
+        h3{
+            font-size: 20px;
+            color: rgb(54, 54, 54);
+        }
+    }
+    
+    
+    
+    /* menu */
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    
+        img{
+            width: 80%;
+            margin-top: 10%;
+        }
+    
+        a{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+    
+            p{
+                color: aliceblue;
+            }
+    
+            p:hover{
+                color: rgb(60, 120, 193);
+                scale: 1.5;
+            }
+        }
+        i{
+            display: none;
+        }
+        
+    }
+    
+    .menuphone{
+        display: none;
+    }
+    
+    
+    
+    .seleccionado{
+        color: rgb(60, 120, 193);
+        font-size: 20px;
+    }
+    
+    
+    /*Main*/
+    
+    .main{
+        img{
+            width: 100%;
+        }
+    }
+    
+    /* Solo para pagina de imagenes */
+    .imagenes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+    .etiqueta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        margin: 20px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid rgb(255, 255, 255) ;
+    
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        }
+    
+        .etiqueta:hover{
+            box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+        }
+    
+        .etiqueta:hover img{
+            transform: scale(1.2);
+            transition: all .5s;
+        }
+    
+        .etiqueta figure{
+            overflow: hidden;
+            width: 100%;
+        }
+    
+    /* Solo para pagina de personajes */
+    
+    .persona{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+    
+    .etiqueta2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        margin: 20px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid rgb(255, 255, 255) ;
+    
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        }
+    
+        .etiqueta2 figure{
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+            filter: grayscale(100%);
+    
+            
+    
+    
+        }
+    
+       .etiqueta2 figure:hover{
+            filter: none;
+            transition-duration: 500ms;
+        }
+    
+        .etiqueta2:hover{
+            box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+        }
+    
+        .etiqueta2:hover img{
+            transform: scale(1.2);
+            transition: all .5s;
+        }
+    
+    
+    /* Footer */
+    
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (width  >=1080px){
+.container{
+    display: grid;
+    grid-template-areas:
+    'nav nav'
+    'aside main'
+    'footer footer';
+
+    height: 100vh;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 10% auto 10%;
+}
+
+/* Nav */
+
+.nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        height: 90%;
+    }
+
+    h3{
+        font-size: 20px;
+        color: rgb(54, 54, 54);
+    }
+}
+
+
+
+/* menu */
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    img{
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    a{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+
+        p{
+            color: aliceblue;
+        }
+
+        p:hover{
+            color: rgb(60, 120, 193);
+            scale: 1.5;
+        }
+    }
+    i{
+        display: none;
+    }
+    
+}
+
+.menuphone{
+    display: none;
+}
+
+
+
+.seleccionado{
+    color: rgb(60, 120, 193);
+    font-size: 20px;
+}
+
+
+/*Main*/
+
+.main{
+    img{
+        width: 100%;
+    }
+}
+
+/* Solo para pagina de imagenes */
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.etiqueta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255) ;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    }
+
+    .etiqueta:hover{
+        box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+    }
+
+    .etiqueta:hover img{
+        transform: scale(1.2);
+        transition: all .5s;
+    }
+
+    .etiqueta figure{
+        overflow: hidden;
+        width: 100%;
+    }
+
+/* Solo para pagina de personajes */
+
+.persona{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+}
+
+.etiqueta2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255) ;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    }
+
+    .etiqueta2 figure{
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+        filter: grayscale(100%);
+
+        
+
+
+    }
+
+   .etiqueta2 figure:hover{
+        filter: none;
+        transition-duration: 500ms;
+    }
+
+    .etiqueta2:hover{
+        box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+    }
+
+    .etiqueta2:hover img{
+        transform: scale(1.2);
+        transition: all .5s;
+    }
+
+
+/* Footer */
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+}
+
+  
+
+
